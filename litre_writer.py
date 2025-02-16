@@ -25,7 +25,7 @@ MODEL_NAME = os.getenv('MODEL_NAME')
 
 
 # load a paper pdf file
-file_path = "papers/Goyal et al. - 2017 - Information Acquisition and Exchange in Social Networks.pdf"
+#file_path = "papers/Goyal et al. - 2017 - Information Acquisition and Exchange in Social Networks.pdf"
 def load_pdf(file_path: str, max_chars: int = 0):
     """Load PDF with length limit to avoid context window issues"""
     doc = pymupdf.open(file_path)
@@ -39,7 +39,7 @@ def load_pdf(file_path: str, max_chars: int = 0):
         return truncated
     return combined_pages
 
-paper_str = load_pdf(file_path)
+#paper_str = load_pdf(file_path)
 import json
 
 def extract_json(text: str) -> dict:
