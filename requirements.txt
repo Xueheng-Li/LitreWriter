@@ -1,4 +1,3 @@
-streamlit
 python-dotenv
 langchain
 langchain-openai
@@ -6,7 +5,4 @@ langchain-community
 langchain-core
 openai
 langgraph
-langsmith
-fastapi
-uvicorn
 pydantic
