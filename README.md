@@ -8,7 +8,7 @@
 
 - Python 3.8 or higher
 - pip (Python package installer)
-- An OpenAI API key
+- An OpenAI compatible API key
 
 ### 📥 Installation
 
