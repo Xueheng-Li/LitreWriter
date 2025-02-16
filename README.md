@@ -8,7 +8,7 @@
 
 - Python 3.8 or higher
 - pip (Python package installer)
-- An OpenAI compatible API key
+- An OpenAI API key
 
 ### 📥 Installation
 
@@ -32,9 +32,9 @@
 4. Set up environment variables:
     Create a `.env` file in the root directory of the project and add your OpenAI compatible API key and other configurations:
     ```env
-    OPENAI_API_KEY=your_openai_api_key
-    BASE_URL=your_openai_api_base_url
-    MODEL_NAME=your_model_name
+    OPENAI_API_KEY=your_openai_api_key # e.g., sk-xxxxxxx
+    BASE_URL=your_openai_api_base_url # e.g., https://openrouter.ai/api/v1
+    MODEL_NAME=your_model_name # e.g., google/gemini-2.0-flash-001
     ```
 
 ## ⚙️ How It Works
