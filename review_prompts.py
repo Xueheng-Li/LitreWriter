@@ -153,6 +153,5 @@ translate_template = PromptTemplate.from_template("""
     - Flag uncertain terms with [NOTE: explanation]
     - Preserve all equations and statistical results exactly
     - Follow Chinese academic writing conventions
-
-    Please translate section by section, maintaining the original structure.
+    - maintain the original structure.
     """)
