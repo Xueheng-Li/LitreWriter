@@ -30,11 +30,13 @@
     ```
 
 4. Set up environment variables:
-    Create a `.env` file in the root directory of the project and add your OpenAI compatible API key and other configurations:
+    Rename `example.env` to `.env` and set your OpenAI compatible API key and other configurations. For example:
     ```env
-    OPENAI_API_KEY=your_openai_api_key # e.g., sk-xxxxxxx
-    BASE_URL=your_openai_api_base_url # e.g., https://openrouter.ai/api/v1
-    MODEL_NAME=your_model_name # e.g., google/gemini-2.0-flash-001
+    API_KEY=your_openai_api_key        # Your OpenAI API key (e.g., sk-xxxxxxx)
+    OPENAI_BASE_URL=https://openrouter.ai/api/v1  # API base URL
+    SUMMARY_MODEL=your_summary_model   # The model used for paper summary (e.g., google/gemini-2.0-flash-001)
+    REVIEW_MODEL=your_review_model     # The model used for review generation (e.g., google/gemini-2.0-flash-001)
+    TRANSLATE_MODEL=your_translate_model  # The model used for translation to Chinese (e.g., google/gemini-2.0-flash-001)
     ```
 
 ## ⚙️ How It Works
@@ -59,18 +61,19 @@ The script follows these steps to generate a literature review:
 
 To run the script, use the following command:
 ```sh
-python litre_writer.py --paper_folder path/to/papers --topic "Your Research Topic"
+python litre_writer.py --paper_folder path/to/papers --topic "Your Research Topic" [--focus "Your Review Focus"]
 ```
 
 ### ⚡ Arguments
 
 - `--paper_folder`: Path to the folder containing the PDF files of the research papers.
 - `--topic`: The research topic for which the literature review is being generated.
+- `--focus`: (Optional) Specific focus or angle for the literature review. If not provided, the model will determine an appropriate focus based on the paper summaries.
 
 ### 🔍 Example
 
 ```sh
-python litre_writer.py --paper_folder papers --topic "Information Acquisition in Social Networks"
+python litre_writer.py --paper_folder papers --topic "Information Acquisition in Social Networks" --focus "Theoretical models and empirical evidence"
 ```
 
 This command will generate a literature review for all papers in the `papers` folder related to the topic "Information Acquisition in Social Networks".
